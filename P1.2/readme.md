@@ -40,20 +40,6 @@ the Gaussian radial basis functions
 ```
 φj(x) = exp
 ```
-#### (
-
-#### −
-
-#### 1
-
-#### 2
-
-```
-(x−μj)>Σ−j^1 (x−μj)
-```
-#### )
-
-#### (2)
 
 whereμjis the center of the basis function andΣjdecides how broadly the basis function spreads.
 
@@ -68,32 +54,19 @@ X={x 1 ,..,xn}and target valuest={t 1 ,..tn}, the likelihood function has the fo
 ```
 p(t|X,w,β) =
 ```
-#### ∏N
 
-```
-n=
-```
-#### N
-
-#### (
 
 ```
 tn|w>φ(xn),β−^1
 ```
-#### )
 
-#### (3)
 
 Maximizing (3) is equivalent to minimizing the sum-of-squares error
 
 ```
 ED(w) =
 ```
-#### 1
 
-#### 2
-
-#### ∑N
 
 ```
 n=
@@ -112,9 +85,7 @@ where theweight decayregularizer is
 ```
 EW(w) =
 ```
-#### 1
 
-#### 2
 
 ```
 wTw (6)
@@ -133,17 +104,7 @@ wML= (Φ>Φ)−^1 Φ>t (7)
 ```
 wheret={t 1 ,..,tN}is the vector of outputs in the training data andΦis the design matrix:
 
-#### Φ=
 
-#### 
-
-#### 
-
-#### 
-
-#### 
-
-#### 
 
 ```
 φ 0 (x 1 ) φ 1 (x 1 ) φ 2 (x 1 ) ··· φM− 1 (x 1 )
@@ -151,34 +112,11 @@ wheret={t 1 ,..,tN}is the vector of outputs in the training data andΦis the des
 ..
 .
 ```
-#### ..
 
-#### .
-
-#### ..
-
-#### .
-
-#### ..
-
-#### .
-
-#### ..
-
-#### .
 
 ```
 φ 0 (xN) φ 1 (xN) φ 2 (xN) ··· φM− 1 (xN)
 ```
-#### 
-
-#### 
-
-#### 
-
-#### 
-
-#### 
 
 The quantity (7) is known as the Moore-Penrose pseudo-inverse of the matrixΦ.
 The closed-form solution with least-squared regularization, as defined by (5) and (6) is
@@ -306,17 +244,7 @@ points as the centers.
 2.Spread for Gaussian radial basis functionsΣj: A first try would be to use uniform spread for
 all basis functionsΣj= Σ. Also constrainΣto be a diagonal matrix
 ```
-#### Σ =
 
-#### 
-
-#### 
-
-#### 
-
-#### 
-
-#### 
 
 ```
 σ 12
@@ -325,17 +253,6 @@ all basis functionsΣj= Σ. Also constrainΣto be a diagonal matrix
 .
 σ^2 D
 ```
-#### 
-
-#### 
-
-#### 
-
-#### 
-
-#### 
-
-#### (14)
 
 ```
 Chooseσ^2 i to be proportional to theith dimension variance of the training data. For example, let
